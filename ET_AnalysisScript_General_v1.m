@@ -4,6 +4,8 @@
 %
 % Leon Kroczek, 2024
 %
+% CC-BY 4.0
+%
 % ReadMe
 % 
 % 1. Import
@@ -434,11 +436,7 @@ for sub = 1:length(subjects) % Subject loop
                 seg.cam_x2(find(ismember(seg.fix_num,FIX_NUM(same == j)))) = mean(unique(seg.cam_x(find(ismember(seg.fix_num,FIX_NUM(same == j))))));
                 seg.cam_y2(find(ismember(seg.fix_num,FIX_NUM(same == j)))) = mean(unique(seg.cam_y(find(ismember(seg.fix_num,FIX_NUM(same == j))))));
                 seg.cam_z2(find(ismember(seg.fix_num,FIX_NUM(same == j)))) = mean(unique(seg.cam_z(find(ismember(seg.fix_num,FIX_NUM(same == j))))));
-
-                %seg1.data.fix_angleL2(find(ismember(seg1.data.fix_num,FIX_NUM(same == j)))) = mean(unique(seg1.data.fix_angleL(find(ismember(seg1.data.fix_num,FIX_NUM(same == j))))));
-                %seg1.data.fix_angleR2(find(ismember(seg1.data.fix_num,FIX_NUM(same == j)))) = mean(unique(seg1.data.fix_angleR(find(ismember(seg1.data.fix_num,FIX_NUM(same == j))))));
-
-
+                
             end
 
         % If there is only one fixation in the segment just copy the data
@@ -455,10 +453,6 @@ for sub = 1:length(subjects) % Subject loop
             seg.cam_x2 = seg.cam_x;
             seg.cam_y2 = seg.cam_y;
             seg.cam_z2 = seg.cam_z;
-
-            %seg1.data.fix_angleL2 = seg1.data.fix_angleL;
-            %seg1.data.fix_angleR2 = seg1.data.fix_angleR;
-
 
         end
 
